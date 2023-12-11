@@ -36,13 +36,13 @@
         transition: background-color, 0.3s;
 
         &:hover {
-            background-color: #b0abab;
-            color: white;
+            background-color: #000;
+            color: $main-background-color;
         }
 
         &--active {
-            background-color: #000;
-            color: white;
+            background-color: $dark-grey-color;
+            color: $main-background-color;
         }
     }
 
