@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.container-info {
+  padding: 10px 15px;
+  border: 1px solid $dark-grey-color;
+  width: 100%;
+  min-height: 250px;
+  box-sizing: border-box;
+  background-color: $main-background-color;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__status {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__another {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

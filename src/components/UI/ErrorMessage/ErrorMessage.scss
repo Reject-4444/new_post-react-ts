@@ -1,0 +1,44 @@
+@import '../../../styles/mixins.scss';
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 80px;
+    background-color: rgba(206, 126, 126, 0.5);
+    color: black;
+    border: 1px solid black;
+    position: relative;
+    font-size: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include onTablet {
+        width: 500px;
+        font-size: 24px;
+    }
+
+    @include onDesktop {
+        width: 650px;
+        font-size: 28px;
+    }
+
+    &__button {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        padding: 3px 5px;
+        border: none;
+        color: red;
+        cursor: pointer;
+        transition: transform, 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

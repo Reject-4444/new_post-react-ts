@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.button {
+    width: 150px;
+    height: 35px;
+    text-transform: uppercase;
+    border: 1px solid $dark-grey-color;
+    background: $dark-grey-color;
+    cursor: pointer;
+    transition: background-color, 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: $main-background-color;
+
+    &:hover {
+        background-color: #000;
+        color: $main-background-color;
+    }
+
+    &:active {
+        background-color: $red-color;
+        color: $main-background-color;
+    }
+}

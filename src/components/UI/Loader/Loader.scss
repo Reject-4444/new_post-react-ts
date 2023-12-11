@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.loader {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 2px dashed $main-background-color;
+    animation: loading 3s infinite linear;
+}
+
+.loader-big {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px dashed black;
+    animation: loading 4s infinite linear;
+    margin: 150px auto;
+
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
