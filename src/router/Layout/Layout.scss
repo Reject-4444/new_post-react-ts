@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    border: 1px solid $dark-grey-color;
+}
+
+.main {
+    flex-grow: 1;
+    padding-inline: 2vmin;
+}
+
+.invisible {
+    display: none;
+}
