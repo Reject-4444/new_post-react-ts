@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.footer {
+    position: relative;
+    &__button {
+        display: block;
+        width: 37.5px;
+        height: 37.5px;
+        border: 1px solid $dark-grey-color;
+        background: url(../../../images/logo/arrow-top-white.svg) no-repeat center;
+        background-color: $dark-grey-color;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #000;
+            color: $main-background-color;
+        }
+
+        &:active {
+            background: url(../../../images/logo/arrow-top-white.svg) no-repeat center;
+            background-color: $red-color;
+        }
+    }
+}
