@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/new_post-react-ts/static/css/main.3027e8e4.css",
-    "main.js": "/new_post-react-ts/static/js/main.7d0f6c8f.js",
+    "main.css": "/new_post-react-ts/static/css/main.afc39d3b.css",
+    "main.js": "/new_post-react-ts/static/js/main.930f32f2.js",
+    "index.html": "/new_post-react-ts/index.html",
     "static/media/arrow-top-white.svg": "/new_post-react-ts/static/media/arrow-top-white.2dddca5003c4832f7dc0.svg",
     "static/media/icon-close.svg": "/new_post-react-ts/static/media/icon-close.9524dedcbbfa1d661f77.svg",
-    "index.html": "/new_post-react-ts/index.html",
     "static/media/icon-menu.svg": "/new_post-react-ts/static/media/icon-menu.c9917370f41163fe036b.svg",
-    "main.3027e8e4.css.map": "/new_post-react-ts/static/css/main.3027e8e4.css.map",
-    "main.7d0f6c8f.js.map": "/new_post-react-ts/static/js/main.7d0f6c8f.js.map"
+    "main.afc39d3b.css.map": "/new_post-react-ts/static/css/main.afc39d3b.css.map",
+    "main.930f32f2.js.map": "/new_post-react-ts/static/js/main.930f32f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.3027e8e4.css",
-    "static/js/main.7d0f6c8f.js"
+    "static/css/main.afc39d3b.css",
+    "static/js/main.930f32f2.js"
   ]
 }
