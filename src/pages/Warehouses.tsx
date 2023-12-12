@@ -1,6 +1,6 @@
 import { API_KEY } from '../constants/api';
 import { useSearchParams } from 'react-router-dom';
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { useFetching } from '../hooks/useFetching';
 import PostService from '../API/PostService';
 import { WarehousesType } from '../types/types';
@@ -9,6 +9,7 @@ import { Loader } from '../components/UI/Loader/Loader';
 import '../components/UI/Form/Form.scss';
 import cl from 'classnames';
 import '../components/UI/Loader/Loader.scss';
+import debounce from 'lodash/debounce';
 
 export const Warehouses = () => {
   const cities = [
@@ -53,12 +54,16 @@ export const Warehouses = () => {
   };
 
   const query = searchParams.get('query') || '';
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const updateDebouncedQuery = useCallback(debounce((value) => setDebouncedQuery(value), 1000), []);
   const handleQuery = (e: ChangeEvent<HTMLInputElement>) => {
     const params = new URLSearchParams(searchParams);
     if (!e.target.value) {
       params.delete('query');
+      updateDebouncedQuery('');
     } else {
       params.set('query', e.target.value);
+      updateDebouncedQuery(e.target.value);
     }
 
     setSearchParams(params);
@@ -95,7 +100,7 @@ export const Warehouses = () => {
 
   const filteredWarehouses = useMemo(() => {
     const filtered = warehouses?.filter((warehouse) =>
-      warehouse.Description.toLowerCase().includes(query.toLowerCase())
+      warehouse.Description.toLowerCase().includes(debouncedQuery.toLowerCase())
     );
     const amount = Math.ceil(filtered.length / limit);
     const arrWithPages = [];
@@ -105,7 +110,7 @@ export const Warehouses = () => {
     setPages(arrWithPages);
 
     return filtered;
-  }, [query, warehouses]);
+  }, [debouncedQuery, warehouses]);
 
 
   const startIndex = (parseInt(chosenPage) - 1) * limit;
