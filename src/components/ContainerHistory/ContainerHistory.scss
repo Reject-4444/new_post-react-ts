@@ -40,6 +40,11 @@
             color: $main-background-color;
         }
 
+        &:active {
+            background-color: $red-color;
+            color: $main-background-color;
+        }
+
         &--active {
             background-color: $dark-grey-color;
             color: $main-background-color;
